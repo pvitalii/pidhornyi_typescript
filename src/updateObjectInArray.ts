@@ -23,5 +23,12 @@ const initialArray = [{
 }
 ];
 
-console.log(updateObjectInArray(initialArray, 'id', 99, { body: 'dgdfg' }))
+interface ObjectShape {
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
+}
+
+console.log(updateObjectInArray<ObjectShape>(initialArray, 'id', 99, { body: 'newBody' }))
 console.log(initialArray)
